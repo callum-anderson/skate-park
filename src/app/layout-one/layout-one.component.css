@@ -1,0 +1,93 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+
+header {
+  position: fixed;
+  top: 80px;
+  width: 100%;
+  z-index: 2;
+} 
+.header {
+    position: relative;
+    height: 300px;
+    background-image: linear-gradient(to bottom, #ffc37e, #c4471a);
+    width: 100vw;
+    border-bottom: 2px solid black;
+    margin-top: 20px;
+  }
+  .page-header {
+    position: absolute;
+    top: 0;
+    background-color: #ffffff;
+  }
+ #half-pipe-img-1 {
+   width: 25%;
+ }
+ #half-pipe-img-2 {
+  width: 22%;
+}
+#half-pipe-img-3 {
+  width: 20%;
+}
+.half-pipe {
+  position: relative;
+  height: 200px;
+  background-color: #ffffff;
+  border-bottom-left-radius: 40% 120%;
+  border-bottom-right-radius: 40% 120%;
+}
+  
+  header h1, .menu-bar {
+    font-family: 'Permanent Marker', cursive;
+  }
+
+  .menu-bar .nav-link {
+    border: 2px black solid;
+    border-radius: 20px;
+    background-color: #ffffff;
+    cursor: pointer;
+    color: #000000;
+    transition: 0.3s;
+  }
+
+  .menu-bar .nav-link:hover {
+    color: #ffffff;
+    background-color: #000000;
+  }
+
+  section {
+    margin-top: 420px;
+   }
+
+  @media screen 
+  and (max-width: 575px) 
+  { 
+    header{
+      top: 200px;
+    }
+    .header {
+      height: 350px;
+    }
+    .page-header {
+      font-size: 22px;
+      padding: 0 10%;
+    }
+    .half-pipe {
+      height: 150px;
+    }
+    #half-pipe-img-1 {
+      width: 50%;
+    }
+    #half-pipe-img-2 {
+     width: 45%;
+   }
+   #half-pipe-img-3 {
+     width: 50%;
+   }
+   .menu-bar .nav-link {
+     margin-bottom: 5px;
+   }
+   section {
+    margin-top: 630px;
+   }
+  }

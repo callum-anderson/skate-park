@@ -1,0 +1,86 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Russo+One&display=swap');
+
+.wrapper {
+    position: fixed;
+    top: 80px;
+}
+.background {
+    background-size: 100%;
+    background-color: gray;
+    background-repeat: no-repeat;
+    min-height: 90vh;
+  }
+
+  header h1 {
+    border: 4px #ff5315 solid;
+    padding: 2%;
+    border-radius: 20px;
+    display: inline-block;
+    background-color: rgba(255,255,255,0.8);
+    position: relative;
+    margin: 40px;
+  }
+  
+  header h1, .menu-bar {
+    font-family: 'Russo One', sans-serif;
+    text-align: center;
+  }
+
+
+.menu-bar {
+    margin: 40px;
+}
+
+  .menu-bar .nav-link {
+    border: 3px #ff5315 solid;
+    color: #000000;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+    background-color: rgba(255,255,255,0.8);
+    margin-right: 10px;
+  }
+
+  .menu-bar .nav-link:hover {
+    color: #ffffff;
+    background-color: #ff5315;
+    border: 3px #ff5315 solid;
+  }
+
+  section {
+    margin: 80px 40px;
+    border: 3px #ff5315 solid;
+    border-radius: 20px;
+    background-color: rgba(255,255,255,0.8);
+   }
+
+  @media screen 
+  and (max-width: 575px) 
+  { 
+    .wrapper {
+        top: 220px;
+    }
+    header h1 {
+        font-size: 18px;
+        width: 60%;
+        border: 2px #ff5315 solid;
+        padding: 2%;
+        border-radius: 10px;
+        margin: 10px;
+      }
+      .menu-bar {
+        margin: 10px;
+    }
+    .menu-bar .nav-link {
+        border: 2px #ff5315 solid;
+        border-radius: 10px;
+        cursor: pointer;
+        margin-bottom: 5px;
+      }
+      section {
+        margin: 10px;
+        border: 2px #ff5315 solid;
+        border-radius: 10px;
+       }
+  }

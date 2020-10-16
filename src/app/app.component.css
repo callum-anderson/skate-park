@@ -1,0 +1,19 @@
+.app-menu {
+    position: fixed;
+    top: 0;
+    height: 100px;
+    background-color: #ffffff;
+    width: 100%;
+    z-index: 5;
+    margin: 0;
+}
+
+.nav-item {
+    cursor: pointer;
+}
+
+@media screen and (max-width: 575px) {
+    .app-menu {
+        height: 220px;
+    }
+}

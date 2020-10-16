@@ -1,0 +1,91 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Russo+One&display=swap');
+
+header {
+  position: fixed;
+  top: 80px;
+  width: 100%;
+  z-index: 2;
+  border-top: 4px #ff5315 solid;
+  border-bottom: 4px #ff5315 solid;
+} 
+  .blur {
+    filter: blur(1px);
+    -webkit-filter: blur(1px);
+  }
+  .image-bg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-repeat: no-repeat;
+      background-size: 100%;
+  }
+.header {
+    position: relative;
+    height: 350px;
+    /* margin-top: 20px; */
+    background-image: linear-gradient(#ff9d2f, #ff6126);
+  }
+
+  header h1 {
+    border: 4px #ff5315 solid;
+    display: inline-block;
+    background-color: rgba(255,255,255,0.5);
+    position: relative;
+    margin: 60px 50px 5%;
+  }
+  
+  header h1, .menu-bar {
+    font-family: 'Russo One', sans-serif;
+    text-align: center;
+  }
+
+  .menu-bar .nav-link {
+    border: 2px #ff5315 solid;
+    cursor: pointer;
+    color: #ff5315;
+    transition: 0.3s;
+    background-color: rgba(255,255,255,0.5);
+    width: 60%;
+    margin: auto;
+  }
+
+  .menu-bar .nav-link:hover {
+    color: #ffffff;
+    background-color: #ff5315;
+  }
+
+  section {
+    margin-top: 480px;
+   }
+
+  @media screen 
+  and (max-width: 575px) 
+  { 
+    header {
+      top: 200px;
+    } 
+    .header {
+      height: 200px;
+    }
+    header h1, .menu-bar .nav-link {
+        font-size: 14px;
+        border: 2px #ff5315 solid;
+        width: 100%;
+        padding: 2px;
+    }
+    header h1 {
+        font-size: 16px;
+        margin: 25px auto 10px;
+        display: block;
+        width: 70%;
+    }
+    .menu-bar .nav-item {
+        margin: 5px 0;
+    }
+   section {
+    margin-top: 420px;
+   }
+  }
