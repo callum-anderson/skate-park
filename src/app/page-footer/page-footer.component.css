@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+
+.footer {
+    /* border-top: 4px solid #000000; */
+    background-color: #000000;
+    /* height: 4.5em; */
+}
+
+* {
+    font: 500 1em 'Permanent Marker', cursive;
+    color: #ffffff;
+    text-shadow: 0.1em 0.1em rgba(255, 255, 255, 0.2);
+}
+
+.logo {
+    font-size: 1.5em;
+    position: relative;
+    top: 50%;
+    left: 25%;
+    transform: translateY(-55%);
+}
+
+.navbar-section {
+    background-color: #000000;
+}
+
+.navbar-section .navbar {
+    padding: 0;
+    font-size: 1.2em;
+}
+.nav-link {
+    cursor: pointer;
+    transition: color 0.4s 0.0833333333s;
+}
+.nav-link::before, .nav-link::after {
+    content: '';
+    pointer-events: none;
+    position: absolute;
+    width: 0;
+    height: 0;
+    bottom: 0;
+    right: 0;
+ }
+  .nav-link:hover {
+    color: #ffe593;
+ }
+  .nav-link:hover::before, .nav-link:hover::after {
+    border-color: #ffe593;
+    transition: border-color 0s, width 0.4s, height 0.4s;
+    width: 100%;
+    height: 100%;
+ }
+  .nav-link:hover::before {
+    transition-delay: 0s, 0s, 0.4s;
+ }
+  .nav-link:hover::after {
+    transition-delay: 0s, 0.4s, 0s;
+ }
+
+@media screen
+and (min-width: 992px)
+and (max-width: 1199px)
+{
+    .footer {
+        border-top: 4px solid #000000;
+    }
+    .logo {
+        left: 10%;
+    }
+}
+
+@media screen
+and (min-width: 768px)
+and (max-width: 991px)
+{
+    .footer {
+        border-top: 3px solid #000000;
+    }
+    .logo {
+        left: 5%;
+        font-size: 1.2em;
+    }
+}
+
+@media screen
+and (min-width: 576px)
+and (max-width: 767px)
+{
+    .footer {
+        border-top: 3px solid #000000;
+    }
+}
+
+
+@media screen
+and (max-width: 575px)
+{
+    .footer {
+        border-top: 2px solid #000000;
+    }
+}
