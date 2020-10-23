@@ -322,32 +322,37 @@ and (max-width: 575px)
     background-color: #f58634;
     background-image: none;
   }
+  .header > div {
+    padding-right: 0;
+  }
  .header-landscape {
    display: none;
  }
  .menu-wrapper {
-  background-image: radial-gradient(circle at 30% 0, #000000, #f58634, #f58634,#f58634);
-  border-top: 2px solid rgba(0,0,0,0.6);
+  background-image: linear-gradient(to bottom, #f58634, #ff9b53);
   border-bottom: 2px solid black;
  }
  .menu-bar {
-  padding: 10px;
-  background-image: radial-gradient(ellipse at 50% 0, transparent, transparent, transparent, #000000);
+  padding: 0;
   background-color: transparent;
+}
+.menu-bar .nav {
+  padding: 0.5em 1em;
+}
+.scooter-trick-2 {
+  position: absolute;
+  left: 10%;
+  bottom: 10%;
+  width: 17%;
+}
+.skateboarder-trick-2 {
+  position: absolute;
+  right: 10%;
+  top: -40%;
+  width: 14%;
 }
 .bttn {
   font-size: 0.9rem;
 }
-.small-tree-1 {
-  position: absolute;
-  bottom: -1px;
-  right: 30%;
-  width: 12%;
-}
-.small-tree-2 {
-  position: absolute;
-  bottom: -1px;
-  right: 10%;
-  width: 15%;
-}
+
 }
