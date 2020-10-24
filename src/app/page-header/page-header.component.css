@@ -12,65 +12,93 @@
   .logo .logo-img {
     width: 75%;
   }
-  .hill {
+  .base-hill {
     background-color: #000000;
     position: absolute;
-    bottom: -18%;
-    left: -25%;
-    width: 120%;
-    height: 30%;
-    border-radius: 40% 40% 0 0;
+    bottom: -21%;
+    left: -20%;
+    width: 75%;
+    height: 35%;
+    border-radius: 20% 0 0 0;
+    transform: skew(-30deg, 0deg);
   }
-  .tree-1{
+  .skatepark-hill-1 {
     position: absolute;
-    left: -15%;
-    bottom: 5%;
-    width: 10%;
+    left: -8%;
+    bottom: 13%;
+    width: 33%;
   }
-  .tree-2{
+  .skatepark-hill-2 {
     position: absolute;
-    right: 5%;
-    bottom: 4%;
-    width: 10%;
+    left: 18%;
+    bottom: 13%;
+    width: 42%;
   }
-.halfpipe {
-  position: absolute;
-  left: 0;
-  bottom: 8%;
-  width: 75%;
-}
-.derby-girl {
-  position: absolute;
-  left: 40%;
-  bottom: 8%;
-  width: 10%;
-}
-.bmx-stunt {
-  position: absolute;
-  left: 15%;
-  bottom: 20%;
-  width: 10%;
-}
+  .tree-1 {
+    position: absolute;
+    left: -14%;
+    bottom: 12%;
+    width: 6%;
+  }
+  .tree-2 {
+    position: absolute;
+    left: -26%;
+    bottom: -1%;
+    width: 6%;
+  }
+  .bmx-stunt {
+    position: absolute;
+    left: 20%;
+    bottom: 32%;
+    width: 6%;
+  }
 .skateboarder-trick {
   position: absolute;
-  right: 5%;
-  bottom: 70%;
-  width: 8%;
+  left: 2%;
+  bottom: 40%;
+  width: 5%;
 }
 .scooter-trick {
   position: absolute;
-  right: 25%;
-  bottom: 9%;
+  left: 38%;
+  bottom: 16%;
+  width: 5%;
+  transform: scale(-1,1);
+}
+.halfpipe {
+  position: absolute;
+  right: 1.6%;
+  bottom: -1%;
+  width: 44%;
+}
+/* silhouettes on halfpipe */
+.girl-skater {
+  position: absolute;
+  left: 40%;
+  bottom: 8%;
+  width: 6%;
+}
+.skateboarder-trick-3 {
+  position: absolute;
+  left: 10%;
+  bottom: 85%;
   width: 9%;
+}
+.scooter-trick-2 {
+  position: absolute;
+  right: 5%;
+  bottom: 80%;
+  width: 14%;
+  transform: scale(-1,1);
 }
 .nav-row {
   background-color: #000000;
 }
   .menu-bar {
-    width: 100%;
+    width: 50%;
     background-color: #000000;
-    padding-top: 20px;
-    padding-bottom: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
   }
 
   /* Nav button effect */
@@ -258,6 +286,9 @@
 and (min-width: 992px)
 and (max-width: 1199px)
 {
+  .halfpipe {
+    right: 2%;
+  }
   .sun {
     width: 44px;
     height: 44px;
@@ -268,6 +299,9 @@ and (max-width: 1199px)
 and (min-width: 768px)
 and (max-width: 991px)
 {
+  .halfpipe {
+    right: 3%;
+  }
   .sun {
     width: 35px;
     height: 35px;
@@ -293,6 +327,9 @@ and (max-width: 991px)
 and (min-width: 576px)
 and (max-width: 767px)
 {
+  .halfpipe {
+    right: 3.5%;
+  }
   .sun {
     width: 30px;
     height: 30px;
@@ -312,8 +349,10 @@ and (max-width: 767px)
  .draw-border {
   box-shadow: inset 0 0 0 2px #ffffff;
  }
+ .menu-bar {
+  width: 60%;
+ }
 }
-
 
 @media screen
 and (max-width: 575px)
@@ -322,13 +361,14 @@ and (max-width: 575px)
     background-color: #f58634;
     background-image: none;
   }
-  .header > div {
-    padding-right: 0;
+  .logo {
+    padding: 0.3em 2em;
   }
  .header-landscape {
    display: none;
  }
  .menu-wrapper {
+  position: relative;
   background-image: linear-gradient(to bottom, #f58634, #ff9b53);
   border-bottom: 2px solid black;
  }
@@ -337,22 +377,80 @@ and (max-width: 575px)
   background-color: transparent;
 }
 .menu-bar .nav {
-  padding: 0.5em 1em;
+  padding: 0.3em 1em;
 }
 .scooter-trick-2 {
   position: absolute;
-  left: 10%;
-  bottom: 10%;
-  width: 17%;
+  right: 9%;
+  top: -220%;
+  width: 18%;
 }
 .skateboarder-trick-2 {
   position: absolute;
-  right: 10%;
-  top: -40%;
-  width: 14%;
+  left: 10%;
+  top: -250%;
+  width: 10%;
 }
 .bttn {
-  font-size: 0.9rem;
+  font-size: 0.8rem;
 }
-
+}
+@media screen
+and (min-width: 450px)
+and (max-width: 575px)
+{
+  .menu-bar{
+    width: 80%;
+  }
+  .skateboarder-trick-2 {
+    position: absolute;
+    left: 7%;
+    top: -300%;
+    width: 9%;
+  }
+  .scooter-trick-2 {
+    position: absolute;
+    right: 8%;
+    top: -300%;
+    width: 18%;
+  }
+}
+@media screen
+and (max-width: 449px)
+{
+  .menu-bar{
+    width: 90%;
+  }
+  .skateboarder-trick-2 {
+    position: absolute;
+    left: 7%;
+    top: -300%;
+    width: 10%;
+  }
+  .scooter-trick-2 {
+    position: absolute;
+    right: 8%;
+    top: -260%;
+    width: 18%;
+  }
+}
+@media screen
+and (max-width: 299px)
+{
+  .menu-bar{
+    width: 100%;
+  }
+  .logo {
+    padding: 0;
+  }
+  .bttn {
+    line-height: 0.8;
+    font-size: 0.8rem;
+  }
+  .skateboarder-trick-2 {
+    display: none;
+  }
+  .scooter-trick-2 {
+    display: none;
+  }
 }

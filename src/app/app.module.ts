@@ -6,7 +6,7 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './page-header/page-header.component';
 import { FooterComponent } from './page-footer/page-footer.component';
 import { AboutPageComponent } from './about-page/about-page.component';
-import { BlogPageComponent } from './blog-page/blog-page.component';
+import { UpdatesPageComponent } from './updates-page/updates-page.component';
 import { FundPageComponent } from './fund-page/fund-page.component';
 
 @NgModule({
@@ -15,7 +15,7 @@ import { FundPageComponent } from './fund-page/fund-page.component';
     HeaderComponent,
     FooterComponent,
     AboutPageComponent,
-    BlogPageComponent,
+    UpdatesPageComponent,
     FundPageComponent
   ],
   imports: [
