@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'fund-page',
@@ -6,7 +6,6 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: ['./fund-page.component.css']
 })
 export class FundPageComponent implements OnInit {
-  @Input() content;
   
   constructor() { }
 

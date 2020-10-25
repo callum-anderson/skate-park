@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'updates-page',
@@ -6,7 +6,6 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: ['./updates-page.component.css']
 })
 export class UpdatesPageComponent implements OnInit {
-  @Input() content;
   
   constructor() { }
 

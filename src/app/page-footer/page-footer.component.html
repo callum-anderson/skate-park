@@ -1,7 +1,7 @@
 <div class="row">
-    <div class="col footer mt-4 py-1">
+    <div class="col footer mt-4 m-1">
         <div class="row">
-            <div class="col-4 col-md-5 position-relative">
+            <div class="col-5 col-sm-3 col-md-5 position-relative">
                     <div class="d-md-none logo text-center">
                         T.S.F.
                     </div>
@@ -9,20 +9,30 @@
                         Tranent Skatepark Foundation
                     </div>
             </div>
-            <div class="col-8 col-md-7 navbar-section">
-                <nav class="navbar navbar-expand-sm">
-                    <ul class="nav navbar-nav mx-auto">
-                      <li class="nav-item mx-md-3">
-                        <button class="nav-link" routerLink="/contact">Contact</button>
-                      </li>
-                      <li class="nav-item mx-md-3">
-                        <button class="nav-link" routerLink="/accessibility">Accessibility</button>
-                      </li>
-                      <li class="nav-item mx-md-3">
-                        <button class="nav-link" routerLink="/links">Links</button>
-                      </li>
-                    </ul>
-              </nav>
+            <div class="col-7 col-sm-9 col-md-7 navbar-section">
+              <nav>
+                <div class="row">
+                  <div class="col-sm-6 d-flex justify-content-center align-items-center">
+                    <div class="my-2 text-center">
+                      <a class="btn d-inline mx-2 mx-sm-3 social-media-icon facebook nav-item" href="https://www.facebook.com/groups/422021105447215" target="_blank">
+                        <fa-icon [icon]="['fab', 'facebook']" aria-label="Link to Facebook Skatepark Foundation group page"></fa-icon>
+                      </a>
+                      <a class="btn d-inline mx-2 mx-sm-3 social-media-icon twitter nav-item" href="https://www.twitter.com/tranentskatepf" target="_blank">
+                        <fa-icon [icon]="['fab', 'twitter']" aria-label="Link to Twitter Skatepark Foundation group page"></fa-icon>  
+                      </a>
+                      <a class="btn d-inline mx-2 mx-sm-3 social-media-icon instagram nav-item" href="https://www.instagram.com/tranentskateparkfoundation" target="_blank">
+                        <fa-icon [icon]="['fab', 'instagram']" aria-label="Link to Instagram Skatepark Foundation group page"></fa-icon>
+                      </a>
+                    </div>
+                  </div>
+                  <div class="col-sm-6 d-flex justify-content-center align-items-center">
+                    <div class="d-flex flex-wrap justify-content-around mx-auto">
+                      <button class="nav-item" routerLink="/contact">Contact</button>
+                      <button class="nav-item" routerLink="/accessibility">Accessibility</button>
+                    </div>
+                  </div>
+                </div>
+          </nav>
             </div>
         </div>
     </div>

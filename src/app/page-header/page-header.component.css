@@ -95,12 +95,12 @@
 .nav-row {
   background-color: #000000;
 }
-  .menu-bar {
-    width: 45%;
-    background-color: #000000;
-    padding-top: 10px;
-    padding-bottom: 10px;
-  }
+.menu-bar {
+  width: 45%;
+  background-color: #000000;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
 
   /* Nav button effect */
 
@@ -154,7 +154,8 @@
     letter-spacing: 0.05rem;
  }
   .bttn:focus {
-    outline: 2px double #ffffff;
+    outline: none;
+    color: #ffe593;
  }
   
 /* Sun effect */
