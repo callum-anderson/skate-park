@@ -5,6 +5,8 @@ import { FontAwesomeModule, FaIconLibrary  } from '@fortawesome/angular-fontawes
 import { faFacebook, faTwitter, faInstagram } from '@fortawesome/free-brands-svg-icons';
 
 import { AppRoutingModule } from './app-routing.module';
+import { HttpClientModule } from '@angular/common/http';
+
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './page-header/page-header.component';
 import { FooterComponent } from './page-footer/page-footer.component';
@@ -29,6 +31,7 @@ import { ContactPageComponent } from './contact-page/contact-page.component';
     BrowserModule,
     FormsModule,
     AppRoutingModule,
+    HttpClientModule,
     FontAwesomeModule
   ],
   providers: [],

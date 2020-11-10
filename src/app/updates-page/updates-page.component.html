@@ -1,3 +1,30 @@
 <h5>Updates</h5>
-<p>Updates will be posted here regularly, please do check back later...
-</p>
+<div class="row" *ngIf="feedError">
+    <div class="col">
+        <h6>Updates currently unavailable - please check back later.</h6>
+    </div>
+</div>
+<div class="row" *ngIf="!feedLoaded && !feedError">
+    <div class="col text-center">
+        <img src="assets/images/loading.gif" alt="Page loading spinner graphic" class="img-fluid">
+    </div>
+</div>
+<div class="row" *ngFor="let post of feed">
+    <div class="col my-2">
+        <div class="row py-2">
+            <div class="col">
+                <h6>{{ post.created_time }}</h6>
+            </div>
+        </div>
+        <div class="row px-4 pt-1">
+            <div class="col">
+                <p class="text-break">{{ post.message }}</p>
+            </div>
+        </div>
+        <div class="row px-4 pb-4 border-bottom justify-content-center">
+            <div class="p-2 mx-md-4 col-sm-6 col-md-4 col-lg-3" *ngFor="let image of post.images">
+                <img src="{{image}}" alt="Image from Facebook post" class="img-fluid">
+            </div>
+        </div>
+    </div>
+</div>
