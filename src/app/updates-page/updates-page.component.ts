@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { HttpParams } from "@angular/common/http";
-import firebase from 'firebase';
 
 @Component({
   selector: 'updates-page',
@@ -18,16 +17,6 @@ export class UpdatesPageComponent implements OnInit {
   constructor(private http: HttpClient) { }
 
   ngOnInit(): void {
-    var firebaseConfig = {
-      apiKey: '<your-api-key>',
-      authDomain: '<your-auth-domain>',
-      databaseURL: '<your-database-url>',
-      storageBucket: '<your-storage-bucket-url>'
-    };
-    firebase.initializeApp(firebaseConfig);
-    var storage = firebase.storage();
-    var storageRef = storage.ref('skate-park-txt');
-    var gsReference = storage.refFromURL('gs://bucket/skate-park-txt');
     const options = { params: new HttpParams().set('access_token', this.accessToken) };
     this.http.get(this.facebookFeedURL, options).subscribe(response => {
         let messages = response['data'].filter(x => x['message']);
