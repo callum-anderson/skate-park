@@ -2,23 +2,69 @@
 <p>We'd love to hear from you, if you have any ideas, comments or suggestions. We're always looking for people who can help out too, in many different areas, 
     so if you have the spare time - please let us know!</p> 
 <p>You'll find the links for our social media pages at the bottom of the page, or alternatively fill out the form below and we'll get back to you as soon as possible.</p>
-<div class="row">
+<div class="row" *ngIf="formSubmitStatus == 'default'">
     <div class="col-md-10 my-md-3 mx-auto">
         <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm" >
             <div class="form-group">
                 <label for="name" class="font-weight-bold">Name</label>
-                <input type="text" class="form-control" id="name" placeholder="Name">
-              </div>
+                <input type="text" class="form-control" id="name" name="name" placeholder="Name" #name="ngModel" ngModel required minlength="3">
+                <span *ngIf="!name.valid && name.touched" class="text-danger">Name must be at least 3 characters long.</span>
+            </div>
             <div class="form-group">
                 <label for="email" class="font-weight-bold">Email address</label>
-                <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Please enter email">
+                <input type="email" class="form-control" id="email" name="email" aria-describedby="emailHelp" placeholder="Please enter email" #email="ngModel" ngModel required email>
                 <small id="emailHelp" class="form-text text-muted">We'll never share your name or email with anyone else.</small>
+                <span *ngIf="!email.valid && email.touched" class="text-danger">Please enter a valid email</span>
               </div>
               <div class="form-group">
                 <label for="enquiry" class="font-weight-bold">Enquiry</label>
-                <textarea  class="form-control" id="enquiry" placeholder="Enquiry details" rows="5"></textarea>
+                <textarea  class="form-control" id="enquiry" name="enquiry" placeholder="Enquiry details" rows="5" #enquiry="ngModel" ngModel required minlength="20"></textarea>
+                <span *ngIf="!enquiry.valid && enquiry.touched" class="text-danger">Please enter at least 20 characters.</span>
               </div>
-              <button type="submit" id="submitBtn" class="btn btn-primary">Submit</button>
+              <button type="submit" id="submitBtn" class="btn btn-primary" [disabled]="!contactForm.valid">Submit</button>
         </form>
     </div>
+</div>
+<div class="row" *ngIf="formSubmitStatus == 'pending'">
+    <div class="col text-center">
+      <img src="assets/images/loading.gif" alt="Page loading spinner graphic" class="img-fluid">
+  </div>
+</div>
+<div class="row justify-content-end mt-5" *ngIf="formSubmitStatus == 'submitted'">
+  <div class="col-sm-10 col-lg-8 font-italic form-submitted">
+    <h4 class="my-4">Thank you!</h4>
+    <p>We will be in touch as soon as possible.</p>
+    <div class="row">
+      <div class="col-sm-2">
+        <strong>Name:</strong>
+      </div>
+      <div class="col-sm-8">
+        {{formValues.name}}
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-2">
+        <strong>Email:</strong>
+      </div>
+      <div class="col-sm-8">
+        {{formValues.email}}
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-2">
+        <strong>Enquiry:</strong>
+      </div>
+      <div class="col-sm-8">
+        {{formValues.enquiry}}
+      </div>
+    </div>
+    <img class="img-fluid skateboarder-boy d-none d-sm-block" src="assets/images/boy-on-skateboard.svg" alt="Silhouette of a boy with baseball cap skateboarding">
+  </div>
+</div>
+<div class="row justify-content-end mt-5" *ngIf="formSubmitStatus == 'error'">
+  <div class="col-sm-10 font-italic form-submitted">
+    <h4 class="my-4">Sorry!</h4>
+    <p>Looks like something went wrong.</p>
+    <p>Please try again later, or alternatively feel free to get in touch via social media, using the links at the bottom of the page.</p>
+  </div>
 </div>
