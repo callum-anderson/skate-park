@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ComponentFactoryResolver, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { HttpClient, HttpHeaders  } from '@angular/common/http';
 
@@ -11,6 +11,7 @@ export class ContactPageComponent implements OnInit {
   contactForm: NgForm;
   formValues;
   formSubmitStatus = 'default';
+  recaptchaKey = '6Lcde-oZAAAAAHIiywzN03LgtmoCciE8cCiNCFrh';
   
   constructor(private http: HttpClient) { }
 
@@ -30,5 +31,4 @@ export class ContactPageComponent implements OnInit {
           this.formSubmitStatus = (err.status == 200) ? 'submitted' : 'error';
         });
   }
-
 }

@@ -15,6 +15,7 @@ import { UpdatesPageComponent } from './updates-page/updates-page.component';
 import { FundPageComponent } from './fund-page/fund-page.component';
 import { AccessibilityPageComponent } from './accessibility-page/accessibility-page.component';
 import { ContactPageComponent } from './contact-page/contact-page.component';
+import { RecaptchaFormsModule, RecaptchaModule } from 'ng-recaptcha';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,9 @@ import { ContactPageComponent } from './contact-page/contact-page.component';
     FormsModule,
     AppRoutingModule,
     HttpClientModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+    RecaptchaModule,
+    RecaptchaFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

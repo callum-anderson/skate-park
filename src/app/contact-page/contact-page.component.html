@@ -21,7 +21,8 @@
                 <textarea  class="form-control" id="enquiry" name="enquiry" placeholder="Enquiry details" rows="5" #enquiry="ngModel" ngModel required minlength="20"></textarea>
                 <span *ngIf="!enquiry.valid && enquiry.touched" class="text-danger">Please enter at least 20 characters.</span>
               </div>
-              <button type="submit" id="submitBtn" class="btn btn-primary" [disabled]="!contactForm.valid">Submit</button>
+              <re-captcha [siteKey]="recaptchaKey" name="recaptcha" #recaptcha="ngModel" ngModel required></re-captcha>
+              <button type="submit" id="submitBtn" class="btn btn-primary my-3" [disabled]="!contactForm.valid">Submit</button>
         </form>
     </div>
 </div>
