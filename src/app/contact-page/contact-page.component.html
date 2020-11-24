@@ -7,18 +7,18 @@
         <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm" >
             <div class="form-group">
                 <label for="name" class="font-weight-bold">Name</label>
-                <input type="text" class="form-control" id="name" name="name" placeholder="Name" #name="ngModel" ngModel required minlength="3">
+                <input type="text" class="form-control" id="name" name="name" placeholder="Please enter your name" #name="ngModel" ngModel required minlength="3">
                 <span *ngIf="!name.valid && name.touched" class="text-danger">Name must be at least 3 characters long.</span>
             </div>
             <div class="form-group">
                 <label for="email" class="font-weight-bold">Email address</label>
-                <input type="email" class="form-control" id="email" name="email" aria-describedby="emailHelp" placeholder="Please enter email" #email="ngModel" ngModel required email>
+                <input type="email" class="form-control" id="email" name="email" aria-describedby="emailHelp" placeholder="Please enter your email address" #email="ngModel" ngModel required email>
                 <small id="emailHelp" class="form-text text-muted">We'll never share your name or email with anyone else.</small>
                 <span *ngIf="!email.valid && email.touched" class="text-danger">Please enter a valid email</span>
               </div>
               <div class="form-group">
                 <label for="enquiry" class="font-weight-bold">Enquiry</label>
-                <textarea  class="form-control" id="enquiry" name="enquiry" placeholder="Enquiry details" rows="5" #enquiry="ngModel" ngModel required minlength="20"></textarea>
+                <textarea  class="form-control" id="enquiry" name="enquiry" placeholder="Please provide enquiry details" rows="5" #enquiry="ngModel" ngModel required minlength="20"></textarea>
                 <span *ngIf="!enquiry.valid && enquiry.touched" class="text-danger">Please enter at least 20 characters.</span>
               </div>
               <re-captcha [siteKey]="recaptchaKey" name="recaptcha" #recaptcha="ngModel" ngModel required></re-captcha>

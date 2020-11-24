@@ -1,5 +1,6 @@
 p {
-    font: 600 1em Helvetica, Arial, sans-serif;
+    font: 600 1.1em Helvetica, Arial, sans-serif;
+    margin: 2em 0;
 }
 #submitBtn {
     background-color: #000000;
