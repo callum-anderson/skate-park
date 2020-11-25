@@ -153,6 +153,10 @@
     padding: 0.4em 0.8em;
     letter-spacing: 0.05rem;
  }
+ .bttn-active {
+    color: #ffe593;
+    box-shadow: inset 0 0 0 3px #ffe593;
+ }
   .bttn:focus {
     outline: none;
     color: #ffe593;
