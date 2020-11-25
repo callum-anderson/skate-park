@@ -15,6 +15,7 @@ export class UpdatesPageComponent implements OnInit {
   //feedError = false;
   //feedLoaded = false;
   data: any = data;
+  updatesToDisplay = 10;
 
   constructor(private http: HttpClient) { }
 
