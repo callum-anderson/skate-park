@@ -1,35 +1,40 @@
 <h3>Updates</h3>
-<!-- <div class="row" *ngIf="feedError">
+<div class="row my-3" *ngIf="dataError">
     <div class="col">
         <h6>Updates currently unavailable - please check back later.</h6>
     </div>
 </div>
-<div class="row" *ngIf="!feedLoaded && !feedError">
+<div class="row my-3" *ngIf="!dataLoaded && !dataError">
     <div class="col text-center">
         <img src="assets/images/loading.gif" alt="Page loading spinner graphic" class="img-fluid">
     </div>
-</div> -->
-<div class="row" *ngFor="let post of data | slice: 0 : updatesToDisplay">
-    <div class="col my-3">
-        <div class="row py-2">
+</div>
+<div class="row" *ngIf="dataLoaded">
+    <div class="col">
+        <div class="row my-3" *ngFor="let post of data | slice: 0 : updatesToDisplay">
             <div class="col">
-                <h6>{{ post.created_time }}</h6>
+                <div class="row py-2">
+                    <div class="col">
+                        <h6>{{ post.created_time }}</h6>
+                    </div>
+                </div>
+                <div class="row px-4 pt-1">
+                    <div class="col">
+                        <p class="text-center">{{ post.message }}</p>
+                    </div>
+                </div>
+                <div class="row px-4 pb-4 border-bottom justify-content-center">
+                    <div class="p-2 mx-md-4 col-sm-6" *ngFor="let image of post.images">
+                        <img src="{{image}}" alt="Image from Facebook post" class="img-fluid">
+                    </div>
+                </div>
             </div>
         </div>
-        <div class="row px-4 pt-1">
-            <div class="col">
-                <p class="text-center">{{ post.message }}</p>
-            </div>
-        </div>
-        <div class="row px-4 pb-4 border-bottom justify-content-center">
-            <div class="p-2 mx-md-4 col-sm-6" *ngFor="let image of post.images">
-                <img src="{{image}}" alt="Image from Facebook post" class="img-fluid">
+        <div class="row" *ngIf="updatesToDisplay < data.length">
+            <div class="col text-center">
+                <button class="btn load-more-updates draw-border my-4" (click)="updatesToDisplay = updatesToDisplay + 10">Load More</button>
             </div>
         </div>
     </div>
 </div>
-<div class="row" *ngIf="updatesToDisplay < data.length">
-    <div class="col text-center">
-        <button class="btn load-more-updates draw-border my-4" (click)="updatesToDisplay = updatesToDisplay + 10">Load More</button>
-    </div>
-</div>
+
